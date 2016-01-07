@@ -1,0 +1,314 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><TITLE>Автострахование. Расчет стоимости полиса для иномарок.</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=windows-1251">
+<META name=description content="Вопросы: год выпуска автомобиля, марка, модель, стоимость автомобиля. Результаты расчета представлены, в зависимости от вида страхового продукта.">
+<META name=keywords content="вопрос, ответ, год, выпуск, автомобиль, 2002, 2001, 2000, 1999, 1998, 1997, 1996, 1995, 1994, 1993, 1992, марка, модель, Alfa-Romeo, Acura, Audi 80, Audi 100, Audi А3, Audi А4, Audi A6, Audi А8, Bently, Bmw 3 серия, Bmw 5 серия, Bmw 7 серия, Bmw 8 серия, Buick, Cadillac, Chevrolet, Chrysler, Citroen, Daewoo, Daihatsu, Diamler, Dodge, Fiat, Ford (Америка), Ford (Европа), GMC, Honda, Hyundai, Infiniti, Isuzu, Jaguar, Kia, Lancia, Lexus, Lincoln, Mazda, Mercedes-Benz, C класса, W 202, Mercedes-Benz S класса, W 140, W 220, Mercedes-Benz Е, W 210, Mercury, Mitsubishi, Nissan, Opel, Peugeot, Plimouth, Pontiac, Porsche, Proton, Renault, Rolls-Royce, Rover, Saab, Seat, Skoda, Subaru, Suzuki, Toyota, VolksWagen, Volvo, ДонИнвест, Орион, Кондор, Ассоль, ВНЕДОРОЖНИКИ, Ford, Mercedes, Bmw, Kia-Sportage, Lexus, Honda, CR-V, HR-V, Suzuki-Vitara, Toyota,  Mitsubishi, Subaru-Forester, Toyota RAV 4, Nissan, GMC, Santa Fe, стоимость автомобиля, результаты расчета, вид продукта, стоимость полиса, угон, плюс ущерб, сопровождение, ДТП, разовая услуга, без ограничений, до первого страхового события, только угон, только ущерб, страхование перегона новых автомобилей">
+<LINK href="style_new.css" type=text/css rel=stylesheet>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+
+function CalcForm()
+
+{
+
+	var x, s, sum;
+	var y = 1;
+	
+
+	var a0 = new Array (0,0,0,0,0,0,0,0,0,0,0,0);
+	var a1 = new Array (0,11,11.6,11.8,12.1,13.2,14.1,14.9,15.6);
+	var a2 = new Array (0,10.5,11.0,11.2,11.6,12.6,13.4,14.2,14.9);
+	var a3 = new Array (0,9.6,10.1,10.3,10.6,11.5,12.3,13,13.6);
+	var a4 = new Array (0,9,9.5,9.6,9.9,10.8,11.5,12.2,12.8);
+	var a5 = new Array (0,8.4,8.8,9.0,9.2,10.1,10.8,11.3,11.9);
+	var a6 = new Array (0,6.6,6.9,7.1,7.3,7.9,8.4,8.9,9.4);
+	var a7 = new Array (0,3.3,3.5,3.5,3.6,4,4.2,4.5,4.7);
+
+   	var b0 = new Array (0,0,0,0,0,0,0,0,0,0,0,0);
+	var b1 = new Array (0,9.5,10.6,11,11.6,12.5,13,13.7,14.7);
+	var b2 = new Array (0,9,9.7,10.5,11,11.7,12,13.5,13.9);
+	var b3 = new Array (0,8.5,9,9.5,9.9,10.7,11.5,12.5,12.6);
+	var b4 = new Array (0,8,8.5,8.6,8.9,9.8,10.5,11.2,11.8);
+	var b5 = new Array (0,6.9,7.3,7.5,8.2,9.1,9.8,10.3,10.9);
+	var b6 = new Array (0,5.6,5.9,6.1,6.3,6.9,7.4,7.9,8.4);
+	var b7 = new Array (0,2.3,2.4,2.5,2.5,3.0,3.2,3.6,3.7);
+
+	var a = new Array (a0,a1,a2,a3,a4,a5,a6,a7);
+	var b = new Array (b0,b1,b2,b3,b4,b5,b6,b7);
+
+var ski0a=0, ski1a=0, ski2a=0, ski3a=0, ski4a=0, ski5a=0,ski6a=0,ski7a=0,ski8a=0, nad0a=0, nad1a=0, nad2a=0, nad3a=0,z=0
+var ski0b=0, ski1b=0, ski2b=0, ski3b=0, ski4b=0, ski5b=0,ski6b=0,                 nad0b=0, nad1b=0, nad2b=0, nad3b=0
+	var s = document.FRM.cost.value;
+	if (document.FRM.ski[0].checked) {ski0a = 5;ski0b = 2; z=1}
+	if (document.FRM.ski[1].checked) {ski1a = 2;ski1b = 0; z=1}
+	if (document.FRM.ski[2].checked) {ski2a = 5;ski2b = 2; z=1}
+	if (document.FRM.ski[3].checked) {ski3a = 2;ski3b = 0; z=1}
+	if (document.FRM.ski[4].checked) {ski4a = 5;ski4b = 0; z=1}
+	if (document.FRM.ski[5].checked) {ski5a = 2;ski5b = 2; z=1}
+	if (document.FRM.ski[6].checked) {ski6a = 5;ski6b = 5; z=1}
+
+
+
+	if (document.FRM.ski[7].checked) {if (s<=50000){if (document.FRM.god.value<5){ski7a = 10}}}
+	if (document.FRM.ski[7].checked) {if (s>50000){if (document.FRM.god.value<5){ski7a = 15}}}
+	if (document.FRM.ski[7].checked) {if (document.FRM.god.value>4){ski7a = 10}}
+
+	if (document.FRM.ski[8].checked) {if (s<=50000){if (document.FRM.god.value<5){ski8a = 20}}}
+	if (document.FRM.ski[8].checked) {if (s>50000){if (document.FRM.god.value<5){ski8a = 25}}}
+	if (document.FRM.ski[8].checked) {if (document.FRM.god.value>4){ski8a = 20}}
+
+
+
+	if (document.FRM.nad[0].checked) {nad0a = 20;nad0b = 15; z=1};
+	if (document.FRM.nad[1].checked) {nad1a = 20;nad1b = 15; z=1};
+        if (document.FRM.nad[2].checked) {nad2a = 10;nad2b = 20; z=1};
+        if (document.FRM.nad[3].checked) {nad2a = 0; nad2b = 20; z=1};
+
+	sum = s * a [document.FRM.car.value][document.FRM.god.value];
+	dam = s * b [document.FRM.car.value][document.FRM.god.value];
+
+sa = ski0a+ski1a+ski2a+ski3a+ski4a+ski5a+ski6a;
+sb = ski0b+ski1b+ski2b+ski3b+ski4b+ski5b+ski6b;
+
+na = nad0a+nad1a+nad2a+nad3a;
+nb = nad0b+nad1b+nad2b+nad3b;
+
+document.FRM.avtokasko.value = String (Math.round(sum/(100+sa+ski7a+ski8a-na)));
+document.FRM.prejudice.value = String (Math.round(dam/(100+sb-nb)));
+document.FRM.hijack.value    = String (Math.round(sum*0.65/100));
+document.FRM.accident.value  = String (Math.round(s   * 0.6/(100+sa-na)));
+
+
+
+    return 0;
+}	
+
+
+-->
+
+</SCRIPT>
+</HEAD>
+<BODY BGCOLOR=#ccddee TEXT=#000000 LINK=#0000FF VLINK=#800080 leftMargin=0 topMargin=0>
+<!--#include virtual="/cgi-bin/tamplate/top.cgi"-->
+<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+	<TBODY>
+	<TR>
+<!--#include virtual="menu.htm"-->
+ </TD>
+<td bgcolor=#fffFFF width=1><IMG height=1 src="http://www.st-rez.ru/img/1.gif" width=1 border=0></td>
+	<TD vAlign=top bgcolor=#ccddee>
+<p>&nbsp;
+		<DIV class=GText align=right><A class=BigBlueText><B>Калькулятор по расчету стоимости полиса для иномарок</b></a></div>
+<div align=justify class=GText>
+<p>&nbsp;
+<table 
+ align="center"  cellspacing="0" border="0"
+ cellpadding="" bgcolor="#ccddee" width=400>
+<TBODY>
+<tr>
+<td>
+<table 
+ align="center"  cellspacing="1" border="0"
+ cellpadding="1" bgcolor="#000000">
+<TBODY>
+<tr bgcolor="#9FB7D5">
+<TD align="center"><div class="formtable"><font class=BlueMenuLink><b>Вопрос</b></font></div></td>
+<td align="center"><div class="formtable"><font class=BlueMenuLink><b>Ответ</b></font></div></TD>
+</tr>
+		<TR bgcolor="#f0f0f0">
+<TD><div class="formtable"><font class=BlueMenuLink>Год выпуска автомобиля</font></div></TD>
+			<TD>
+<FORM NAME="FRM">
+<div class="formtable">&nbsp;&nbsp;
+<SELECT NAME="god" SIZE="1">
+<OPTION VALUE="1">&nbsp;2004&nbsp;</OPTION>
+<OPTION VALUE="2">&nbsp;2003&nbsp;</OPTION>
+<OPTION VALUE="3">&nbsp;2002&nbsp;</OPTION>
+<OPTION VALUE="4">&nbsp;2001&nbsp;</OPTION>
+<OPTION VALUE="5">&nbsp;2000&nbsp;</OPTION>
+<OPTION VALUE="6">&nbsp;1999&nbsp;</OPTION>
+<OPTION VALUE="7">&nbsp;1998&nbsp;</OPTION>
+<OPTION VALUE="8">&nbsp;1997&nbsp;</OPTION>
+			    </SELECT></div>
+				</TD>
+				</TR>
+
+<TR bgcolor="#e0e0e0">
+<TD><div class="formtable"><font class=BlueMenuLink>Марка, модель</font></div></TD>
+<TD>
+<div class="formtable">&nbsp;&nbsp;<SELECT NAME="car" SIZE="1">
+  <OPTION VALUE="2" selected>&nbsp;Alfa-Romeo</OPTION>
+  <OPTION VALUE="2">&nbsp;Acura</OPTION>
+   <OPTION VALUE="3">&nbsp;Audi 80,100,А3</OPTION>
+  <OPTION VALUE="2">&nbsp;Audi А4, A6</OPTION>
+ <OPTION VALUE="1">&nbsp;Audi А8</OPTION>
+ <OPTION VALUE="1">&nbsp;Bently</OPTION>
+   <OPTION VALUE="3">&nbsp;BMW 3 серия</OPTION>
+  <OPTION VALUE="2">&nbsp;BMW 5 серия</OPTION>
+ <OPTION VALUE="1">&nbsp;Bmw 7,8 серия</OPTION>
+  <OPTION VALUE="2">&nbsp;Buick</OPTION>
+ <OPTION VALUE="1">&nbsp;Cadillac</OPTION>
+  <OPTION VALUE="2">&nbsp;Chevrolet</OPTION>
+  <OPTION VALUE="2">&nbsp;Chrysler</OPTION>
+   <OPTION VALUE="3">&nbsp;Citroen</OPTION>
+    <OPTION VALUE="4">&nbsp;Daewoo</OPTION>
+  <OPTION VALUE="2">&nbsp;Daihatsu</OPTION>
+ <OPTION VALUE="1">&nbsp;Diamler</OPTION>
+  <OPTION VALUE="2">&nbsp;Dodge</OPTION>
+   <OPTION VALUE="3">&nbsp;Fiat</OPTION>
+  <OPTION VALUE="2">&nbsp;Ford (США)</OPTION>
+   <OPTION VALUE="3">&nbsp;Ford (Европа)</OPTION>
+  <OPTION VALUE="2">&nbsp;GMC</OPTION>
+   <OPTION VALUE="3">&nbsp;Honda</OPTION>
+   <OPTION VALUE="3">&nbsp;Hyundai</OPTION>
+  <OPTION VALUE="2">&nbsp;Infiniti</OPTION>
+   <OPTION VALUE="3">&nbsp;Isuzu</OPTION>
+ <OPTION VALUE="1">&nbsp;Jaguar</OPTION>
+    <OPTION VALUE="4">&nbsp;Kia</OPTION>
+   <OPTION VALUE="3">&nbsp;Lancia</OPTION>
+ <OPTION VALUE="1">&nbsp;Lexus</OPTION>
+  <OPTION VALUE="2">&nbsp;Lincoln</OPTION>
+   <OPTION VALUE="3">&nbsp;Mazda</OPTION>
+   <OPTION VALUE="3">&nbsp;Mercedes C класса (W 202)</OPTION>
+ <OPTION VALUE="1">&nbsp;Mercedes-Benz S класса W 140,220</OPTION>
+  <OPTION VALUE="2">&nbsp;Mercedes E класса (W 210)</OPTION>
+  <OPTION VALUE="2">&nbsp;Mercury</OPTION>
+   <OPTION VALUE="3">&nbsp;Mitsubishi</OPTION>
+   <OPTION VALUE="3">&nbsp;Nissan</OPTION>
+   <OPTION VALUE="3">&nbsp;Opel</OPTION>
+   <OPTION VALUE="3">&nbsp;Peugeot</OPTION>
+  <OPTION VALUE="2">&nbsp;Plymouth</OPTION>
+ <OPTION VALUE="1">&nbsp;Pontiac</OPTION>
+   <OPTION VALUE="3">&nbsp;Proton</OPTION>
+   <OPTION VALUE="3">&nbsp;Renault</OPTION>
+ <OPTION VALUE="1">&nbsp;Rolls-Royce</OPTION>
+   <OPTION VALUE="3">&nbsp;Rover</OPTION>
+  <OPTION VALUE="2">&nbsp;Saab</OPTION>
+   <OPTION VALUE="3">&nbsp;Seat</OPTION>
+    <OPTION VALUE="4">&nbsp;Skoda</OPTION>
+  <OPTION VALUE="2">&nbsp;Subaru</OPTION>
+   <OPTION VALUE="3">&nbsp;Suzuki</OPTION>
+   <OPTION VALUE="3">&nbsp;Toyota</OPTION>
+   <OPTION VALUE="3">&nbsp;VolksWagen</OPTION>
+  <OPTION VALUE="2">&nbsp;Volvo</OPTION>
+    <OPTION VALUE="4">&nbsp;ДонИнвест (Орион, Кондор, Ассоль)</OPTION>
+<OPTION VALUE="1">&nbsp;&#151;&#151;&#151;&#151;&#151;&nbsp;ВНЕДОРОЖНИКИ&nbsp;&#151;&#151;&#151;&#151;&#151;&nbsp;</OPTION>
+ <OPTION VALUE="1">&nbsp;Внедорожники США</OPTION>
+ <OPTION VALUE="1">&nbsp;Ford</OPTION>
+ <OPTION VALUE="1">&nbsp;Mercedes</OPTION>
+ <OPTION VALUE="1">&nbsp;BMW</OPTION>
+ <OPTION VALUE="1">&nbsp;Lexus</OPTION>
+ <OPTION VALUE="1">&nbsp;Mitsubishi</OPTION>
+ <OPTION VALUE="1">&nbsp;Toyota с объемом двигателя более 2,5 л</OPTION>
+ <OPTION VALUE="1">&nbsp;Nissan</OPTION>
+ <OPTION VALUE="1">&nbsp;GMC</OPTION>
+   <OPTION VALUE="3">&nbsp;Внедорожники малого класса (с объемом двигателя менее 2,5 л.)</OPTION>
+   <OPTION VALUE="0">_________________________________________________________</OPTION>
+   <OPTION VALUE="3">&nbsp;Минивэны</OPTION>
+     <OPTION VALUE="5">&nbsp;МИКРОАВТОБУСЫ, МИНИГРУЗОВИКИ</OPTION>
+      <OPTION VALUE="6">&nbsp;АВТОБУСЫ,  ГРУЗОВИКИ</OPTION>
+       <OPTION VALUE="7">&nbsp;ПРИЦЕПЫ, ПОЛУПРИЦЕПЫ</OPTION>
+			   </SELECT></div>
+</TD>
+</TR>
+<TR bgcolor="#f0f0f0">
+<TD><div class="formtable"><font class=BlueMenuLink>Стоимость автомобиля</font></div></TD>
+<TD><div class="formtable">&nbsp;&nbsp;<INPUT TYPE="Text" NAME="cost" SIZE="15" MAXLENGTH="15"><font class=BlueMenuLink>&nbsp;USD</font></div></TD>
+</TR>
+
+
+
+
+<tr>
+<td bgcolor="#e0e0e0">
+<div class="formtable">
+<font class=BlueMenuLink>Допустимые скидки</font></div>
+</td>
+
+<td class="GlobalGray" bgcolor="#e0e0e0">
+<TABLE CELLSPACING="1" CELLPADDING="1" BORDER="0">
+<TR><TD VALIGN="TOP"><div class="formtable"><INPUT TYPE="checkbox" NAME="ski" value="0"></TD></div><TD><div class="formtable"><font class=BlueMenuLink>Хранение СНТ на охраняемой стоянке в ночное время при предоставлении договора об ответственном хранении.</font></div></TD></TR>
+<TR><TD VALIGN="TOP"><div class="formtable"><INPUT TYPE="checkbox" NAME="ski" value="1"></TD></div><TD><div class="formtable"><font class=BlueMenuLink>Хранение СНТ на охраняемой стоянке в ночное время без предоставления договора об ответственном хранении.</font></div></TD></TR>
+<TR><TD VALIGN="TOP"><div class="formtable"><INPUT TYPE="checkbox" NAME="ski" value="2"></div></TD><TD><div class="formtable"><font class=BlueMenuLink>Единовременный платеж при общем взносе более 1000 USD.</font></div></TD></TR>
+<TR><TD VALIGN="TOP"><div class="formtable"><INPUT TYPE="checkbox" NAME="ski" value="3"></div></TD><TD><div class="formtable"><font class=BlueMenuLink>Несъемное механическое ПУС.</font></div></TD></TR>
+<TR><TD VALIGN="TOP"><div class="formtable"><INPUT TYPE="checkbox" NAME="ski" value="4"></div></TD><TD><div class="formtable"><font class=BlueMenuLink>Страхование новых СНТ  в течении 14 дней с момента покупки.</font></div></TD></TR>
+<TR><TD VALIGN="TOP"><div class="formtable"><INPUT TYPE="checkbox" NAME="ski" value="5"></div></TD><TD><div class="formtable"><font class=BlueMenuLink>За размещение наклейки на стекле автомобиля.</font></div></TD></TR>
+<TR><TD VALIGN="TOP"><div class="formtable"><INPUT TYPE="checkbox" NAME="ski" value="6"></div></TD><TD><div class="formtable"><font class=BlueMenuLink>Допущен к управлению один человек со стажем более 10 лет.</font></div></TD></TR>
+<TR><TD VALIGN="TOP"><div class="formtable"><INPUT TYPE="checkbox" NAME="ski" value="7"></div></TD><TD><div class="formtable"><font class=BlueMenuLink>Радиопоиск.</font></div></TD></TR>
+<TR><TD VALIGN="TOP"><div class="formtable"><INPUT TYPE="checkbox" NAME="ski" value="8"></div></TD><TD><div class="formtable"><font class=BlueMenuLink>Спутниковый поиск.</font></div></TD></TR>
+</TABLE>
+</td>
+</tr>
+
+<tr>
+<td bgcolor="#f0f0f0"><div class="formtable"><font class=BlueMenuLink>Обязательные надбавки</font></div>
+</td>
+
+<td class="GlobalGray" bgcolor="#f0f0f0">
+<TABLE CELLSPACING="1" CELLPADDING="1" BORDER="0">
+<TR><TD VALIGN="TOP"><div class="formtable"><INPUT TYPE="checkbox" NAME="nad" value="0"></TD></div><TD><div class="formtable"><font class=BlueMenuLink>Водительский стаж менее 2-х лет хотя бы одного из допущенных к управлению, либо безусловная <i>франшиза по риску «ущерб» 200 USD</i></font></div></TD></TR>
+<TR><TD VALIGN="TOP"><div class="formtable"><INPUT TYPE="checkbox" NAME="nad" value="0"></TD></div><TD><div class="formtable"><font class=BlueMenuLink>Возраст хотя бы одного из допущенных к управлению до 22 лет включительно</font></div></TD></TR>
+<TR><TD VALIGN="TOP"><div class="formtable"><INPUT TYPE="checkbox" NAME="nad" value="1"></div></TD><TD><div class="formtable"><font class=BlueMenuLink>Ремонт на СТОА Страхователя <b>СНТ не старше 2001 года выпуска</b>.</font></div></TD></TR>
+<TR><TD VALIGN="TOP"><div class="formtable"><INPUT TYPE="checkbox" NAME="nad" value="2"></div></TD><TD><div class="formtable"><font class=BlueMenuLink>Автомобили с правым расположением руля.</font></div></TD></TR>
+</TABLE>
+</td>
+</tr>
+
+
+
+<tr bgcolor="#e0e0e0">
+<td colspan="2"><center><div class="formtable">
+<INPUT TYPE="button" Value="Рассчитать"  onClick="CalcForm()"></div></center>
+</td></tr>
+</tbody>
+</table>
+</td></tr></tbody></table>
+<div align="left"><A class=BigBlueText><B>Результаты расчета, в зависимости от вида страхового продукта</b>.</a></font></div><br>
+
+<table 
+ align="center"  cellspacing="0" border="0"
+ cellpadding="" bgcolor="#ffffff" width=400>
+<TBODY>
+<tr>
+<td>
+<table 
+ align="center"  cellspacing="1" border="0"
+ cellpadding="1" bgcolor="#000000">
+<TBODY>
+<tr bgcolor="#9FB7D5">
+<TD align="center"><div class="formtable"><b><A class=BlueMenuLink href="http://www.st-rez.ru/serv/avto/insurproduct.htm" target="new">Вид продукта</a></b></div></td>
+<td align="center"><div class="formtable"><font class=BlueMenuLink><b>Стоимость полиса</b></font></div></TD>
+</tr>
+<tr bgcolor="#d0d0d0">
+<TD align="center"><div class="formtable"><font class=BlueMenuLink>Автокаско:</font></div></td>
+<td><div class="formtable">&nbsp;&nbsp;<INPUT TYPE="Text" NAME="avtokasko" MAXLENGTH="50" SIZE="15" VALUE="0"><font class=BlueMenuLink>&nbsp;USD</font></div></TD>
+</tr>
+<tr bgcolor="#f0f0f0">
+<TD align="center"><div class="formtable"><font class=BlueMenuLink>Ущерб:</font></div></td>
+<td><div class="formtable">&nbsp;&nbsp;<INPUT TYPE="Text" NAME="prejudice" MAXLENGTH="50" SIZE="15" VALUE="0"><font class=BlueMenuLink>&nbsp;USD</font></div></TD>
+</tr>
+
+<tr bgcolor="#d0d0d0">
+<TD align="center"><div class="formtable"><font class=BlueMenuLink>Угон (Хищение):</font></div></td>
+<td><div class="formtable">&nbsp;&nbsp;<INPUT TYPE="Text" NAME="hijack" MAXLENGTH="50" SIZE="15" VALUE="0"><font class=BlueMenuLink>&nbsp;USD</font></div></TD>
+</tr>
+
+<tr bgcolor="#f0f0f0">
+<TD align="center"><div class="formtable"><font class=BlueMenuLink>Несчастный случай с водителем и/или пассажирами:</font></div></td>
+<td><div class="formtable">&nbsp;&nbsp;<INPUT TYPE="Text" NAME="accident" MAXLENGTH="50" SIZE="15" VALUE="0"><font class=BlueMenuLink>&nbsp;USD</font></div></TD>
+</tr>
+
+
+</form>
+</tbody>
+</table>
+</td></tr></tbody></table><br><br>
+<p><a href=http://www.st-rez.ru/serv/avto/anketa.htm>Заказав полис на нашем сайте</a>, вы получаете скидку в 5% от рассчитанной вами суммы.
+
+<p><h2>Общая скидка по договору 1-го года страхования не может превышать 20 %,  с учетом скидки за систему поиска – 30%.</h2>
+<p>По всем вопросам звоните в отдел автострахования - 974-70-77.<p></div>
+		</td>
+		</tr>
+	</TABLE>
+<!--#include virtual="/cgi-bin/tamplate/back.cgi"-->
+</body></html>

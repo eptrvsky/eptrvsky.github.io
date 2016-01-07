@@ -1,0 +1,88 @@
+UNKNOWN {
+	FONT-SIZE: 11px; COLOR: #dd0000; FONT-FAMILY: sans-serif,verdana,arial,geneva; TEXT-DECORATION: none
+}
+.MainMenuLink {
+	FONT-SIZE: 11px; COLOR: #000000; FONT-FAMILY: sans-serif,verdana,arial,geneva; TEXT-DECORATION: none
+}
+.MainMenuLink:hover {
+	COLOR: #a0a0a0
+}
+.frmtblsm {
+	MARGIN: 5px 5px 10px 10px
+}
+.formtable {
+	MARGIN: 5px 10px
+}
+.GText {
+	FONT-SIZE: 14px; COLOR: #303030; FONT-FAMILY: arial, geneva, verdana; TEXT-DECORATION: none
+}
+.BigGreyText {
+	FONT-SIZE: 17px; COLOR: #909090; FONT-FAMILY: sans-serif,verdana,arial,geneva; TEXT-DECORATION: none
+}
+INPUT {
+	FONT-SIZE: 11px; COLOR: #2a5bab
+}
+SELECT {
+	FONT-SIZE: 11px; COLOR: #2a5bab
+}
+.BlueText {
+	FONT-SIZE: 12px; COLOR: #2a5bab; FONT-FAMILY: sans-serif,verdana,arial,geneva; TEXT-DECORATION: none
+}
+
+.BigBlueText {
+	FONT-SIZE: 20px; COLOR: #000090; TEXT-DECORATION: none
+}
+.RedText {
+	FONT-SIZE: 14px; COLOR: #cc0000; FONT-FAMILY: sans-serif,verdana,arial,geneva; TEXT-DECORATION: none
+}
+.BigRedText {
+	FONT-SIZE: 20px; COLOR: #000000; FONT-FAMILY: sans-serif,verdana,arial,geneva; TEXT-DECORATION: none
+}
+.smBlueTextLink {
+	FONT-SIZE: 10px; COLOR: #cc0000; FONT-FAMILY: arial, geneva, sans-serif, verdana; TEXT-DECORATION: none
+}
+.smBlueTextLink:hover {
+	COLOR: #ff3333
+}
+.YellowMenuLink {
+	FONT-SIZE: 11px; COLOR: #ffffcc; FONT-FAMILY: sans-serif,verdana,arial,geneva; TEXT-DECORATION: none
+}
+.YellowMenuLink:hover {
+	COLOR: #ccccff
+}
+.WhiteMenuLink {
+	FONT-SIZE: 11px; COLOR: #ffffff; FONT-FAMILY: sans-serif,verdana,arial,geneva; TEXT-DECORATION: none
+}
+.WhiteMenuLink:hover {
+	COLOR: #ccccff
+}
+.rm {
+	MARGIN: 0px 0px 10px 8px
+}
+.dm {
+	MARGIN: 0px 10px 0px 25px
+}
+.LeftMenu {
+	MARGIN: 7px 5px 7px 10px
+}
+.NameDir {
+	MARGIN: 10px 25px 0px 10px
+}
+.lm {
+	MARGIN-TOP: 10px; MARGIN-LEFT: 10px; MARGIN-RIGHT: 5px
+}
+.GreyText {
+	FONT-SIZE: 11px; COLOR: #000000; FONT-FAMILY: Verdana,Arial,Helvetica
+}
+.BlueMenuLink {
+	FONT-SIZE: 11px; COLOR: #2a5bab; FONT-FAMILY: verdana,arial,geneva; TEXT-DECORATION: none
+}
+.BlueMenuLink:hover {
+	TEXT-DECORATION: underline
+}
+.BlueMenuLinkU {
+	FONT-SIZE: 11px; COLOR: #000090; FONT-FAMILY: verdana,arial,geneva
+}
+.BlueMenuLinkU:hover {
+	COLOR: #e04040
+}

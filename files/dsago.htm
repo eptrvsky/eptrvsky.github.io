@@ -1,0 +1,160 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><TITLE>Дополнительное добровольное страхование автогражданской ответственности (ДСАГО) только при наличии полиса ОСАГО.</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=windows-1251">
+<META name=description content="Калькулятор по расчету стоимости полиса дополнительного добровольного страхования автогражданской ответственности (ДСАГО) только при наличии полиса ОСАГО. Рассчитайте и закажите полис on-line" >
+<META name=keywords content="страхование, автострахование, страхование автомобиля, страхование авто, машины, эвакуация автомобиля, сопровождение после ДТП, угон, ущерб, хищение, перегон, гибель автомобиля, условия страхования, страховая сумма, 5000, 10000, 15000, 20000, 25000, 50000, год выпуска, автомобиль, 1995, 1996, 1997, 1998, 1999, 2000, 2002, 2003, 1991, 1992, 1991, 1993, не более, два водителя, стажем более 2-х лет, один водитель, стажем вождения, более 10 лет, легковой автомобиль, малого класса, Ока, Дэу Тико, Таврия, стоимость полиса, заказать полис гражданской ответственности, без осмотра автомобиля, осмотр автомобиля, доставка в пределах МКАД, заказ полис сайт, скидка, отдел автострахования">
+<LINK href="style_new.css" type=text/css rel=stylesheet>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+
+function CalcForm()
+{
+	var k = 0;
+	var y;
+	var x = 0;
+	var sum = 0;
+var s=0;
+var up0 = 0;
+var up1 = 0;
+var up2 = 0;
+var up3 = 0;
+var up4 = 0;
+var up5 = 0;
+var z = 0;
+
+	var a0 = new Array (0,0,0,0,0);
+	var a1 = new Array (0,20,30,40,20);
+	var a2 = new Array (0,40,50,60,40);
+	var a3 = new Array (0,60,70,80,60);
+	var a4 = new Array (0,80,90,100,80);
+
+	var targ = new Array (a0,a1,a2,a3,a4);
+
+
+	if (document.FRM.upk[0].checked) {up0 = 20; z=1;}
+	if (document.FRM.upk[1].checked) {up1 = 10; z=1;}
+	if (document.FRM.upk[2].checked) {up2 = 50; z=1;}
+	if (document.FRM.upk[3].checked) {up3 = 100; z=1;}
+
+	sumo = targ [document.FRM.cost.value][document.FRM.type.value];
+
+if (z>0) {s = up0+up1+up2+up3;
+
+sumo = (targ [document.FRM.cost.value][document.FRM.type.value]/100)*(100+s);
+         }
+
+//sumo=s;
+
+	document.FRM.only.value = String (Math.round(sumo));
+
+    return 0;
+}	
+
+
+
+//-->
+
+
+</SCRIPT>
+</HEAD>
+<BODY BGCOLOR=#ccddee TEXT=#000000 LINK=#0000FF VLINK=#800080 leftMargin=0 topMargin=0>
+<!--#include virtual="/cgi-bin/tamplate/top.cgi"-->
+<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+	<TBODY>
+	<TR>
+<!--#include virtual="menu.htm"-->
+ </TD>
+<td bgcolor=#fffFFF width=1><IMG height=1 src="http://www.st-rez.ru/img/1.gif" width=1 border=0></td>
+	<TD vAlign=top bgcolor=#ccddee>
+<p>&nbsp;
+		<DIV class=GText align=right><A class=BigBlueText><B>Калькулятор по расчету стоимости полиса дополнительного добровольного страхования автогражданской ответственности (ДСАГО) только при наличии полиса ОСАГО.</b><br><br></a>
+
+<div class=GText align=justify>
+<p>&nbsp;
+<table 
+ align="center"  cellspacing="0" border="0" bgcolor="#ccddee">
+<TBODY>
+<tr>
+<td>
+
+<table 
+ align="center"  cellspacing="1" border="0"
+ cellpadding="1" width="98%" bgcolor="#000000">
+<TBODY>
+<tr bgcolor="#9FB7D5">
+<TD align="left" colspan="2"><font class=BlueMenuLink><b><div class="formtable">Условия страхования:</div></b></font></td>
+</tr>
+
+		<tr>
+		<td bgcolor="#f0f0f0" width=200><FORM NAME="FRM"><div class="formtable"><font class=BlueMenuLink>Страховая сумма</font></div>
+		</td>
+
+		<td bgcolor="#f0f0f0"><div class="formtable"><SELECT NAME="cost" SIZE="1">
+	   	<OPTION VALUE="1">&nbsp;10 000 $</OPTION>
+	   	<OPTION VALUE="2">&nbsp;15 000 $</OPTION>
+	   	<OPTION VALUE="3">&nbsp;20 000 $</OPTION>
+	   	<OPTION VALUE="4">&nbsp;25 000 $</OPTION>
+		</SELECT></div>
+		</td>
+		</tr>
+
+
+		<tr>
+		<td bgcolor="#f0f0f0" width=200><div class="formtable"><font class=BlueMenuLink>Страховая сумма</font></div>
+		</td>
+
+		<td bgcolor="#f0f0f0"><div class="formtable"><SELECT NAME="type" SIZE="1">
+	   	<OPTION VALUE="1"> Легковые автомобили</OPTION>
+	   	<OPTION VALUE="2"> Внедорожники, микроавтобусы, минигрузовики грузоподъемностью менее 1,5 т</OPTION>
+	   	<OPTION VALUE="3"> Грузовики грузоподъемностью более 1,5 т и автобусы имеющие более 10 мест</OPTION>
+	   	<OPTION VALUE="4"> Прицепы, полуприцепы</OPTION>
+		</SELECT></div>
+		</td>
+		</tr>
+
+
+
+
+
+<tr>
+<td bgcolor="#f0f0f0"><div class="formtable"><font class=BlueMenuLink>Повышающие коэффициенты по отношению к базовой страховой премии ДСАГО</font></div>
+</td>
+
+<td class="GlobalGray" bgcolor="#f0f0f0">
+<TABLE CELLSPACING="1" CELLPADDING="1" BORDER="0">
+<TR><TD VALIGN="TOP"><div class="formtable"><INPUT TYPE="checkbox" NAME="upk" value="0"></TD></div><TD><div class="formtable"><font class=BlueMenuLink>Водительский стаж менее 2-х лет хотя бы одного из допущенных к управлению.</font></div></TD></TR>
+<TR><TD VALIGN="TOP"><div class="formtable"><INPUT TYPE="checkbox" NAME="upk" value="1"></div></TD><TD><div class="formtable"><font class=BlueMenuLink>Возраст хотя бы одного из допущенных к управлению до 22 лет включительно.</font></div></TD></TR>
+<TR><TD VALIGN="TOP"><div class="formtable"><INPUT TYPE="checkbox" NAME="upk" value="2"></div></TD><TD><div class="formtable"><font class=BlueMenuLink>СНТ отечественного и иностранного производства 1991-1994 годов выпуска страхуются на сумму не более 20 000 USD.</font></div></TD></TR>
+<TR><TD VALIGN="TOP"><div class="formtable"><INPUT TYPE="checkbox" NAME="upk" value="3"></div></TD><TD><div class="formtable"><font class=BlueMenuLink>СНТ отечественного и иностранного производства старше 1991 годов выпуска страхуются на сумму не более 10 000 USD.</font></div></TD></TR>
+</TABLE>
+</td>
+</tr>
+
+
+
+<TR bgcolor="#e0e0e0">
+<TD COLSPAN=2>
+<CENTER><div class="formtable">
+<INPUT TYPE="button" Value="Рассчитать"  onClick="CalcForm()"></div>
+</CENTER>
+</TD>
+</TR>
+
+<tr bgcolor="#e0e0e0">
+<TD align="center"><div class="formtable"><font class=BlueMenuLink>При страховании только риска гражданской ответственности:</font></div></td>
+<td><div class="formtable"><INPUT TYPE="Text" NAME="only" MAXLENGTH="50" SIZE="8" VALUE="0"><font class=BlueMenuLink>&nbsp;USD</font></div></TD>
+</tr>
+</tbody>
+</table>
+</td></tr></tbody></table>
+<p><a href=http://www.st-rez.ru/serv/avto/civilrespon.htm>Вы можете заказать полис гражданской ответственности  <b>без осмотра</b> автомобиля и с <b>бесплатной доставкой</b> в пределах МКАД</a>
+
+<p><a href=http://www.st-rez.ru/serv/avto/anketa.htm>Заказав полис на нашем сайте, вы получите скидку от 5% до 17%.</a>
+
+<p>По всем вопросам звоните в отдел автострахования - 974-70-77.</span></div>
+		</td>
+		</tr>
+	</TABLE>
+
+<!--#include virtual="/cgi-bin/tamplate/back.cgi"-->
+</body></html>

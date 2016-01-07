@@ -1,0 +1,195 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><TITLE>Программа «Оптима»</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=windows-1251">
+<META  name=description content="Калькулятор по расчету стоимости полиса. Программа «Оптима». Рассчитайте и закажите полис on-line"> 
+<META name=keywords content="страхование, автострахование, страхование автомобиля, страхование авто, машины, эвакуация автомобиля, сопровождение после ДТП, угон, ущерб, хищение, перегон, гибель автомобиля, условия страхования">
+<LINK href="style_new.css" type=text/css rel=stylesheet>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+
+function CalcForm()
+{
+var ski0=0, ski1=0, ski2=0, ski3=0, ski4=0, ski5=0, nad0=0, nad1=0, nad2=0, nad3=0,z=0
+
+	if (document.FRM.ski[0].checked) {ski0 = 5; z=1}
+	if (document.FRM.ski[1].checked) {ski1 = 2; z=1}
+	if (document.FRM.ski[2].checked) {ski2 = 2; z=1}
+	if (document.FRM.ski[3].checked) {ski3 = 5; z=1}
+	if (document.FRM.ski[4].checked) {ski4 = 10; z=1}
+	if (document.FRM.ski[5].checked) {ski5 = 5; z=1}
+
+	if (document.FRM.nad[0].checked) {nad0 = 10; z=1};
+	if (document.FRM.nad[1].checked) {nad1 = 10; z=1};
+	if (document.FRM.nad[2].checked) {nad2 = 5; z=1};
+	if (document.FRM.nad[3].checked) {nad3 = 10; z=1};
+
+
+
+
+s = ski0+ski1+ski2+ski3+ski4+ski5;
+s=String (Math.round(s));
+n = nad0+nad1+nad2+nad3;
+
+policy = document.FRM.cost.value/100*document.FRM.god.value;
+policy=policy-(policy/100*s);
+policy=policy+(policy/100*n);
+
+sum=policy;
+document.FRM.policy.value = String (Math.round(sum));
+
+    return 0;
+}	
+
+
+
+//-->
+
+
+</SCRIPT>
+</HEAD>
+<BODY BGCOLOR=#ccddee TEXT=#000000 LINK=#0000FF VLINK=#800080 leftMargin=0 topMargin=0>
+<!--#include virtual="/cgi-bin/tamplate/top.cgi"-->
+<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+	<TBODY>
+	<TR>
+<!--#include virtual="menu.htm"-->
+ </TD>
+<td bgcolor=#fffFFF width=1><IMG height=1 src="http://www.st-rez.ru/img/1.gif" width=1 border=0></td>
+	<TD vAlign=top bgcolor=#ccddee>
+<p>&nbsp;
+		<DIV class=GText align=right><A class=BigBlueText><B>Программа «Оптима».</b><br><br></a>
+
+<div class=GText align=justify>
+<p>&nbsp;
+
+
+<p>Данная программа действительна в период с 1 марта 2004 года по 31 мая 2004 года.<br><br>
+
+<table align="center"  cellspacing="0" border="0" bgcolor="#ccddee">
+<TH>Alfa Romeo 147, Audi A2, A3, BMW318, Citroen C5, Ford Mondeo, Honda Accord, Honda HR-V, Mazda 6, Nissan Primera, Nissan Maxima, Opel Vectra, Opel Omega, Opel Frontera, Subaru Impreza, Subaru Legacy, Subaru Forester, Toyota Avensis, Toyota Camry, Toyota Rav4, Volkswagen Golf, Volkswagen Bora, Volvo V40, Volvo S40</tH>
+<TBODY>
+<tr>
+<td>
+
+<table 
+ align="center"  cellspacing="1" border="0"
+ cellpadding="1" width="98%" bgcolor="#000000">
+<TBODY>
+
+
+<FORM NAME="FRM">
+
+<tr>
+<td bgcolor="#f0f0f0" width=200>
+<div class="formtable">
+<font class=BlueMenuLink>Стоимость автомобиля:</font>
+</div>
+</td>
+
+<td bgcolor="#f0f0f0">
+<div class="formtable">
+<INPUT TYPE="Text" NAME="cost" SIZE="8" MAXLENGTH="8">
+<font class=BlueMenuLink>USD</font>
+</div>
+</td>
+</tr>
+
+<tr>
+<td bgcolor="#f0f0f0" width=200>
+<div class="formtable">
+<font class=BlueMenuLink>Количество полных лет эксплуатации</font>
+</div>
+</td>
+
+<td bgcolor="#f0f0f0">
+<div class="formtable">
+<SELECT NAME="god" SIZE="1">
+<OPTION VALUE="8.6">&nbsp;2004</OPTION>
+<OPTION VALUE="9.1">&nbsp;2003</OPTION>
+<OPTION VALUE="9.8">&nbsp;2002</OPTION>
+</SELECT>
+</div>
+</td>
+</tr>
+
+
+
+
+<tr>
+<td bgcolor="#f0f0f0">
+<div class="formtable">
+<font class=BlueMenuLink>Допустимые скидки</font></div>
+</td>
+
+<td class="GlobalGray" bgcolor="#f0f0f0">
+<TABLE CELLSPACING="1" CELLPADDING="1" BORDER="0">
+<TR><TD VALIGN="TOP"><div class="formtable"><INPUT TYPE="checkbox" NAME="ski" value="0"></TD></div><TD><div class="formtable"><font class=BlueMenuLink>Хранение СНТ на охраняемой стоянке в ночное время.</font></div></TD></TR>
+<TR><TD VALIGN="TOP"><div class="formtable"><INPUT TYPE="checkbox" NAME="ski" value="1"></div></TD><TD><div class="formtable"><font class=BlueMenuLink>Единовременный платеж, при общем платеже по договору более 1000 USD.</font></div></TD></TR>
+<TR><TD VALIGN="TOP"><div class="formtable"><INPUT TYPE="checkbox" NAME="ski" value="2"></div></TD><TD><div class="formtable"><font class=BlueMenuLink>Размещение наклейки на стекле автомобиля.</font></div></TD></TR>
+<TR><TD VALIGN="TOP"><div class="formtable"><INPUT TYPE="checkbox" NAME="ski" value="3"></div></TD><TD><div class="formtable"><font class=BlueMenuLink>Допущен к управлению 1 человек со стажем более 10 лет.</font></div></TD></TR>
+<TR><TD VALIGN="TOP"><div class="formtable"><INPUT TYPE="checkbox" NAME="ski" value="4"></div></TD><TD><div class="formtable"><font class=BlueMenuLink>Наличие системы радиопоиска.</font></div></TD></TR>
+<TR><TD VALIGN="TOP"><div class="formtable"><INPUT TYPE="checkbox" NAME="ski" value="5"></div></TD><TD><div class="formtable"><font class=BlueMenuLink>Страхование новых СНТ в течение 14 дней с момента покупки.</font></div></TD></TR>
+</TABLE>
+</td>
+</tr>
+
+<tr>
+<td bgcolor="#f0f0f0"><div class="formtable"><font class=BlueMenuLink>Обязательные надбавки</font></div>
+</td>
+
+<td class="GlobalGray" bgcolor="#f0f0f0">
+<TABLE CELLSPACING="1" CELLPADDING="1" BORDER="0">
+<TR><TD VALIGN="TOP"><div class="formtable"><INPUT TYPE="checkbox" NAME="nad" value="0"></TD></div><TD><div class="formtable"><font class=BlueMenuLink>Водительский стаж хотя бы одного из лиц, допущенных к управлению менее 2-х лет.</font></div></TD></TR>
+<TR><TD VALIGN="TOP"><div class="formtable"><INPUT TYPE="checkbox" NAME="nad" value="1"></div></TD><TD><div class="formtable"><font class=BlueMenuLink>Возраст хотя бы одного из допущенных до 22 лет.</font></div></TD></TR>
+<TR><TD VALIGN="TOP"><div class="formtable"><INPUT TYPE="checkbox" NAME="nad" value="2"></div></TD><TD><div class="formtable"><font class=BlueMenuLink>Количество лиц, допущенных к управлению свыше 3-х.</font></div></TD></TR>
+<TR><TD VALIGN="TOP"><div class="formtable"><INPUT TYPE="checkbox" NAME="nad" value="3"></div></TD><TD><div class="formtable"><font class=BlueMenuLink>Ремонт на  СТОА страхователя.</font></div></TD></TR>
+</TABLE>
+</td>
+</tr>
+
+
+
+<TR bgcolor="#e0e0e0">
+<TD COLSPAN=2>
+<CENTER><div class="formtable">
+<INPUT TYPE="button" Value="Рассчитать"  onClick="CalcForm()"></div>
+</CENTER>
+</TD>
+</TR>
+
+<tr bgcolor="#e0e0e0">
+<TD align="center"><div class="formtable"><font class=BlueMenuLink>Стоимость полиса:</font></div></td>
+<td><div class="formtable">
+<INPUT TYPE="Text" NAME="policy" MAXLENGTH="50" SIZE="8" VALUE="0"><font class=BlueMenuLink>&nbsp;USD</font></div></TD>
+</tr>
+</tbody>
+</table>
+</td></tr></tbody></table>
+СНТ 1998-2004 годов выпуска, принимаемые на страхование, обязаны иметь ПУ, рекомендованные страховой компанией в соответствии с таблицей 
+
+<table border=1>
+<tr>
+<TD rowspan="2">Легковые автомобили <b>иностранного</b> производства стоимостью <b>от 20000 $ до 30 000$</b></td> <td>Охраняемая стоянка</td> <td>Заводская сигнализация или другая электронная противоугонная система + несъемное механическое ПУ</td> 
+</tr>
+
+<tr>
+<td>Неохраняемая Стоянка</td> <td>Заводская сигнализация или  другая электронная  противоугонная система стоимостью свыше 500 $ +  несъемное механическое ПУ</td> 
+</tr>
+
+<tr>
+<TD rowspan="2">Легковые автомобили <b>иностранного</b> производства стоимостью <b>от 30 001 $ до 35 000$</b></td> <td>Охраняемая стоянка</td> <td>Заводская сигнализация или  другая  электронная противоугонная система стоимостью свыше 800 $ + несъемное механическое ПУ</td> 
+</tr>
+
+<tr>
+<td>Неохраняемая Стоянка</td> <td>Заводская сигнализация +  система радиопоиска или  Заводская сигнализация + другая  электронная противоугонная система + несъемное механическое ПУ</td> 
+</tr>
+
+</table>
+
+<p>По всем вопросам звоните в отдел автострахования - (095) 974-70-77.</span></div>
+		</td>
+		</tr>
+	</TABLE>
+
+<!--#include virtual="/cgi-bin/tamplate/back.cgi"-->
+</body></html>
